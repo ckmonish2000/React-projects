@@ -7,11 +7,14 @@ class Counters extends Component{
     {id:3,value:0},
     {id:4,value:0},
   ] }
+  handleDel=()=>{
+    console.log("fucker");
+  }
   render(){
     return(
       <div>
         {this.state.counters.map(counter=>
-           <Counter key={counter.id} value={counter.value} />)}
+           <Counter key={counter.id} value={counter.value}  onDelete={this.handleDel}/>)}
       </div>
 
       /* children :<div>

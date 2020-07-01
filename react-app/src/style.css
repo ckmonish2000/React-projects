@@ -31,3 +31,15 @@
 .bn{
   display: flex;
 }
+
+.del{
+  font-weight: bold;
+  color:white;
+  margin:10px;
+  text-align: center;
+  background:#cf1919;
+  padding: 10px;
+  border-radius: 14px ;
+  font-family: cursive;
+  box-shadow: 2px 2px 1px 0.5px grey;
+}
