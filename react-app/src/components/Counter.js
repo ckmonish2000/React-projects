@@ -4,6 +4,7 @@ import React,{Component} from "react";
 class Counter extends Component{
 state={
   count:0,
+  tags:["tag1","tag2","tag3"]
 
 };
 
@@ -18,10 +19,13 @@ clr(){
 
   return(
       <React.Fragment>
-      <div className="bn">
+    <div className="bn">
     <h6 className="badge"  style={this.clr()}><h1>{this.formatCount()}</h1></h6>
     <span>  <button className="incr">increment</button></span>
     </div>
+    <ul>
+{ this.state.tags.map(tag=><li>{tag}</li>)}
+    </ul>
       </React.Fragment>
     );
   }
