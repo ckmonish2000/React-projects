@@ -4,11 +4,13 @@ import React,{Component} from "react";
 
 
 class Counter extends Component{
+  // constructor(){
+  //   super();
+  //   this.handleIncr=this.handleIncr.bind(this);
+  // }
 state={
   count:0,
-  tags:["tag1","tag2","tag3"]
-
-};
+  };
 
 clr(){
   var clr=(this.state.count===0) ? "#d19c08" :"#323ea8";
@@ -18,8 +20,11 @@ clr(){
   return stl
 }
 
-handleIncr(){
-  console.log("incr");
+handleIncr=()=>{
+  var val=this.state.count+1;
+  console.log("incr",this);
+  this.setState({count:val})
+  console.log(this.state.tags);
 }
 
   render(){
