@@ -32,7 +32,7 @@ console.log(this.props);
   return(
       <React.Fragment>
     <div className="bn">
-    {this.props.children}
+    {/* children {this.props.children}*/}
     <h3 className="badge"  style={this.clr()}>{this.formatCount()}</h3>
     <span>  <button className="incr" onClick={this.handleIncr}>increment</button></span>
     </div>
