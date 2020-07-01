@@ -27,9 +27,9 @@ handleIncr=()=>{
   console.log(this.state.tags);
 }
 
-handleDelete=()=>{
-  this.props.onDelete();
-}
+// handleDelete=()=>{
+//   this.props.onDelete();
+// }
   render(){
 console.log(this.props);
   return(
@@ -38,7 +38,7 @@ console.log(this.props);
     {/* children {this.props.children}*/}
     <h3 className="badge"  style={this.clr()}>{this.formatCount()}</h3>
     <span>  <button className="incr" onClick={this.handleIncr}>increment</button></span>
-    <button className="del" onClick={this.handleDelete}>delete</button>
+    <button className="del" onClick={()=>this.props.onDelete(this.props.id)}>delete</button>
     </div>
     </React.Fragment>
     );
