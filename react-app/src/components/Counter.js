@@ -9,11 +9,11 @@ class Counter extends Component{
   //   this.handleIncr=this.handleIncr.bind(this);
   // }
 state={
-  count:0,
+  value:this.props.value,
   };
 
 clr(){
-  var clr=(this.state.count===0) ? "#d19c08" :"#323ea8";
+  var clr=(this.state.value===0) ? "#d19c08" :"#323ea8";
   var stl={
     background:clr
   }
@@ -21,17 +21,18 @@ clr(){
 }
 
 handleIncr=()=>{
-  var val=this.state.count+1;
+  var val=this.state.value+1;
   console.log("incr",this);
-  this.setState({count:val})
+  this.setState({value:val})
   console.log(this.state.tags);
 }
 
   render(){
-
+console.log(this.props);
   return(
       <React.Fragment>
     <div className="bn">
+    {this.props.children}
     <h3 className="badge"  style={this.clr()}>{this.formatCount()}</h3>
     <span>  <button className="incr" onClick={this.handleIncr}>increment</button></span>
     </div>
@@ -40,8 +41,8 @@ handleIncr=()=>{
   }
 
   formatCount(){
-    const {count}=this.state
-    return count === 0 ? "Zero" : count ;
+    const {value}=this.state
+    return value === 0 ? "Zero" : value ;
   }
 }
 
