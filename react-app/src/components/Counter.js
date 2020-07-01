@@ -17,18 +17,20 @@ clr(){
   }
   return stl
 }
+
+handleIncr(){
+  console.log("incr");
+}
+
   render(){
 
   return(
       <React.Fragment>
     <div className="bn">
     <h3 className="badge"  style={this.clr()}>{this.formatCount()}</h3>
-    <span>  <button className="incr">increment</button></span>
+    <span>  <button className="incr" onClick={this.handleIncr}>increment</button></span>
     </div>
-    <ul>
-{ this.state.tags.map(tag=><li key={tag}>{tag}</li>)}
-    </ul>
-      </React.Fragment>
+    </React.Fragment>
     );
   }
 
