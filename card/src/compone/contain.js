@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Banner from "./banner"
+import axios from "axios"
 export default class Contain extends Component {
     state={
         data:[
