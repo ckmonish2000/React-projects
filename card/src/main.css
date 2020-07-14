@@ -27,7 +27,7 @@
     padding: 10px;
 }
 .Ch{
-   
+   outline: none;
     width: 150px;
     height: 100px;
     margin-top: auto;
@@ -36,5 +36,5 @@
  
 }
 .ch:hover{
-    box-shadow: 2px 1px 2px black;
+    box-shadow: 3px 2px 2px black;
 }
