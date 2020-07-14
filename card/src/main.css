@@ -1,4 +1,13 @@
 .banner{
-    display:flex;
+    display: inline-block;
+    margin: 10px;   
     border:5px solid grey;
+    border-radius: 8px;
+}
+
+.imgB{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    
 }
