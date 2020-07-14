@@ -4,17 +4,37 @@
     border:5px solid grey;
     border-radius: 10px;
     
+    
 }
 
 .imgB{
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
+    width: 180px;
+    height: 180px;
     border-bottom-left-radius: 0px;
     border-botsstom-right-radius: 0px;
     
 }
-
+.bound{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
 .Divider{
     padding: 10px;
+}
+.Ch{
+   
+    width: 150px;
+    height: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50px;
+ 
+}
+.ch:hover{
+    box-shadow: 2px 1px 2px black;
 }
