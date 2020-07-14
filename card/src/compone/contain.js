@@ -17,38 +17,26 @@ export default class Contain extends Component {
     }
         ]
     }
-
+    count=0
     imgs=()=>{
-       var data=[];
         
-        for(var i=0;i<this.state.data.length;i++){
-        axios.get(`https://randomfox.ca/floof/`).then(res=>{
-            var dta=[...this.state.data]
-            dta.filter(e=>{if(e.id===i){
-                e.img=res.data.image
-            }
-            this.setState({data:dta})
-        })
-        })
-    }
+            var y =axios.get(`https://randomfox.ca/floof/`).then(res=>{
+               
+               console.log(res.data)
+               var dta=[...this.state.data]
+                dta.filter((e)=>{if(e.id===this.count){e.img=res.data.image}})
+                console.log(dta)
+               this.count+=1
+                this.setState({data:dta})
+            })
         
-    }
+            
+            return y
+        
+        }
 
 
-    // {
-        
-    //     var y =axios.get(`https://randomfox.ca/floof/`).then(res=>{
-    //         console.log(res.data)
-    //        var dta=[...this.state.data]
-    //         dta.map((e)=>{e.img=res.data.image})
-    //         console.log(dta)
-    //         this.setState({data:dta})
-    //     })
     
-        
-    //     return y
-    
-    // }
 
     rem=(id)=>{
         var x=[...this.state.data]
