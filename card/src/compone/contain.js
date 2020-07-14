@@ -17,7 +17,7 @@ export default class Contain extends Component {
     }
         ]
     }
-    count=0
+    count=1
     imgs=()=>{
         
             var y =axios.get(`https://randomfox.ca/floof/`).then(res=>{
@@ -26,7 +26,10 @@ export default class Contain extends Component {
                var dta=[...this.state.data]
                 dta.filter((e)=>{if(e.id===this.count){e.img=res.data.image}})
                 console.log(dta)
-               this.count+=1
+               if(this.count>=this.state.data.length){
+                   this.count=1
+               }else{
+                this.count+=1}
                 this.setState({data:dta})
             })
         
