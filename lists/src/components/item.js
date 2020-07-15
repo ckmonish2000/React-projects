@@ -7,12 +7,11 @@ export default class Item extends Component {
     render() {
 
         return (
-            <div className="box">
-                
-        <span> {this.props.value.id}. </span> {this.props.value.title}
-        <button onClick={this.del}>Done</button>
-
-              
+        <div className="box">
+         <div className="base">
+        <h5><span> {this.props.value.id}. </span> {this.props.value.title}</h5>
+        <button onClick={this.del} style={{margin:"3px"}}>Done</button>
+</div>            
 
             </div>
         )
