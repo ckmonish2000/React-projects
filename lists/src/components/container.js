@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios"
+import Item from "./item"
 export default class Container extends Component {
     state={
         data:[]
@@ -12,9 +13,10 @@ export default class Container extends Component {
         })
     }
     render() {
+        
         return (
             <div>
-                <h1>Hello</h1>
+                {this.state.data.map(e=>{return <Item value={e}/>})}
             </div>
         )
     }
