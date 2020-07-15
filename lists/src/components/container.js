@@ -21,11 +21,17 @@ export default class Container extends Component {
        console.log(x1)
        this.setState({data:x1})
     }
-    
+    handle=(e)=>{
+        
+        var title=e.target.value
+        console.log(title)
+
+    }
     render() {
         
         return (
             <div>
+                <input type='text' onChange={this.handle}/>
                 {this.state.data.map(e=>{return <Item value={e} rem={this.rem}/>})}
             </div>
         )
