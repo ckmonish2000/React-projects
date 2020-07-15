@@ -21,17 +21,28 @@ export default class Container extends Component {
        console.log(x1)
        this.setState({data:x1})
     }
+    title=null;
+
     handle=(e)=>{
         
-        var title=e.target.value
-        console.log(title)
+        this.title=e.target.value
+        console.log(this.title)
 
+    }
+    addele=()=>{
+        
+        var x=[...this.state.data]
+        var val={userId: 2, id: this.state.data.length+1, title: this.title, body:"fuck you" }
+        x.push(val)
+        console.log(x)
+        this.setState({data:x})
     }
     render() {
         
         return (
             <div>
                 <input type='text' onChange={this.handle}/>
+                <button onClick={this.addele}>submit</button>
                 {this.state.data.map(e=>{return <Item value={e} rem={this.rem}/>})}
             </div>
         )
