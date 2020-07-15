@@ -41,8 +41,10 @@ export default class Container extends Component {
         
         return (
             <div>
-                <input type='text' onChange={this.handle}/>
-                <button onClick={this.addele}>submit</button>
+                <div className="forms">
+                <input type='text' onChange={this.handle} className="boxe"/>
+                <button onClick={this.addele} className="Dbtns">submit</button>
+                </div>
                 {this.state.data.map(e=>{return <Item value={e} rem={this.rem}/>})}
             </div>
         )
