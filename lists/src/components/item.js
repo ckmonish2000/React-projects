@@ -10,7 +10,7 @@ export default class Item extends Component {
             <div className="box">
                 
         <span> {this.props.value.id}. </span> {this.props.value.title}
-        <button onClick={this.del}>Delete</button>
+        <button onClick={this.del}>Done</button>
 
               
 
